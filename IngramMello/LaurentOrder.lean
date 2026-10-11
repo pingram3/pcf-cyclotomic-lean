@@ -1,4 +1,4 @@
-import IngramMello.Cited
+import IngramMello.Inputs
 
 /-!
 # Orders of vanishing of Laurent polynomials
@@ -6,7 +6,7 @@ import IngramMello.Cited
 Infrastructure for `MvLaurent r = ℂ[u₁^{±1}, …, u_r^{±1}]`.
 
 * `MvLaurent.evalHom x` is evaluation at a point `x ∈ (ℂ^×)^r`, as a `ℂ`-algebra map.
-  It agrees with `MvLaurent.eval` from `Cited.lean` (`MvLaurent.evalHom_apply`).
+  It agrees with `MvLaurent.eval` from `Inputs.lean` (`MvLaurent.evalHom_apply`).
 * `MvLaurent.maxIdeal x` is its kernel, the maximal ideal `𝔪_x` of `x`. We say
   `ord_x F ≥ n` when `F ∈ 𝔪_x ^ n`. This matches the paper, which defines `ord_x` on
   `K[V]` via powers of the maximal ideal `𝔪_x ⊆ K[V]` of functions vanishing at `x`
@@ -41,7 +41,7 @@ theorem evalHom_single (x : Fin r → ℂˣ) (a : Fin r → ℤ) (β : ℂ) :
     evalHom x (single a β) = β * ∏ j, ((x j : ℂ) ^ a j) := by
   simp [evalHom, character, Units.val_zpow_eq_zpow_val]
 
-/-- `evalHom` agrees with `MvLaurent.eval` of `Cited.lean`. -/
+/-- `evalHom` agrees with `MvLaurent.eval` of `Inputs.lean`. -/
 theorem evalHom_apply (x : Fin r → ℂˣ) (F : MvLaurent r) :
     evalHom x F = MvLaurent.eval F (fun j => (x j : ℂ)) := by
   simp [evalHom, AddMonoidAlgebra.lift_apply', MvLaurent.eval, character,

@@ -3,8 +3,9 @@ import IngramMello.LaurentOrder
 /-!
 # Lemma 6 for `r > 1`: restriction to a monomial curve
 
-The cited `SuperAttracting` covers one-parameter families over `ℂ[t^{±1}]`. The paper reduces
-`r > 1` to this by pulling back along a monomial curve `t ↦ t^β` for a generic `β ∈ ℤ^r`.
+The statement `SuperAttracting` of `Inputs.lean` covers one-parameter families over
+`ℂ[t^{±1}]`. The paper reduces `r > 1` to this by pulling back along a monomial curve `t ↦ t^β`
+for a generic `β ∈ ℤ^r`.
 
 * `MvLaurent.curve β`: the pullback `ℂ[u^{±1}] → ℂ[t^{±1}]`, `u^a ↦ t^{β·a}`.
 * `MvLaurent.eval₂_curve`: evaluation at `t₀` is evaluation at `t₀^β`.

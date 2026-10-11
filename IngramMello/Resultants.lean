@@ -23,7 +23,7 @@ Main results:
 * `exists_infiniteOrbitFactor_monicCentred`: the same factor `A` for `f = monicCentred d a`,
   with its roots characterized as the infinite-orbit critical points.
 * `exists_superAttracting_root`: the super-attracting parameter of Lemma 6, as a root of a
-  specialization of `A`, using the cited `SuperAttracting` and the monomial-curve reduction
+  specialization of `A`, using the input `SuperAttracting` and the monomial-curve reduction
   of `SuperAttracting.lean`.
 * `exists_highOrderResultant`: the assembled statement (Lemma 7 combined with Lemma 6) for
   `f = monicCentred d a` over `R₀`.
@@ -570,7 +570,7 @@ theorem exists_infiniteOrbitFactor_monicCentred {R₀ : Type*} [CommRing R₀] [
 
 /-- **Super-attracting parameters for `A`** (Lemma 6 in the form used in Lemma 7). Let
 `ι : R₀ → ℂ[u^{±1}]` with some `ι(a_i)` non-constant, `f = monicCentred d a`, `f' = d g` and
-`g = A B` with `B ∣ (fⁿ - fᵐ)^N`, `n ≠ m`. Then, by the cited `SuperAttracting` applied along a
+`g = A B` with `B ∣ (fⁿ - fᵐ)^N`, `n ≠ m`. Then, by `SuperAttracting` applied along a
 generic monomial curve, there are `x ∈ (ℂ^×)^r`, `q ≥ 1` and a root `c₀` of `A_x` which is a
 critical point of `f_x` with `f_x^q(c₀) = c₀`. -/
 theorem exists_superAttracting_root (hSA : SuperAttracting) {R₀ : Type*} [CommRing R₀]

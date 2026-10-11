@@ -10,7 +10,7 @@ Everything takes place inside `ℂ`.
   unity in `ℂ`.
 * `monicCentred d a` is `z^d + a_{d-2} z^{d-2} + ⋯ + a_0`, with coefficients
   `a : Fin (d - 1) → R` (so `a i` is the coefficient of `z^i`). It is defined over any
-  commutative ring so that `Cited.lean` can reuse it for families.
+  commutative ring so that `Inputs.lean` can reuse it for families.
 * `HasFiniteOrbit f z` says the forward orbit `{z, f z, f (f z), …}` is finite.
 * `IsPCF f` says every root of `f'` in `ℂ` has finite forward orbit.
 * `MainStatement` is Theorem 1: for every number field `K` and every `d ≥ 2`, only

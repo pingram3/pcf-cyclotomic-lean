@@ -1,4 +1,4 @@
-import IngramMello.Cited
+import IngramMello.Inputs
 
 /-!
 # Lemma 4: one fixed linear form
